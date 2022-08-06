@@ -1,4 +1,4 @@
-# A Small utility to add the include feature du glsl
+# A Small utility to add the include feature to glsl
 ## How to use it
 * Download the latest release
 * Usage example : GLSLInclude.exe filea.glsl fileb.glsl -o {fileNameNoExt}.generated{ext}
@@ -6,6 +6,7 @@
 
 ## What it does
 * Handle multiple includes in one file
+* The syntax is the same as in C language
 * Handle deep includes correctly
 * Handle relative paths
 * Detects circular references
@@ -17,6 +18,7 @@
 * Not tested spaces / tab robustness
 * Not tested comments robustness
 * Not tested multiline include
+* Not tested <> includes
 
 ## Roadmap
 * Clean it a bit
