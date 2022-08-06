@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLSLIncludes", "GLSLInclude
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLSLIncludes_UnitTests", "GLSLIncludes_UnitTests\GLSLIncludes_UnitTests.csproj", "{B308E5E7-8D68-4CC0-8E24-D27A90F83A7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLSLIncludesAssembly", "GLSLIncludesAssembly\GLSLIncludesAssembly.csproj", "{133CD196-117A-4AA3-B85E-F9033D663D70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLSLIncludesAssembly", "GLSLIncludesAssembly\GLSLIncludesAssembly.csproj", "{6EC4D588-01A9-4764-AADC-3087267C5896}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{B308E5E7-8D68-4CC0-8E24-D27A90F83A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B308E5E7-8D68-4CC0-8E24-D27A90F83A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B308E5E7-8D68-4CC0-8E24-D27A90F83A7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{133CD196-117A-4AA3-B85E-F9033D663D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{133CD196-117A-4AA3-B85E-F9033D663D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{133CD196-117A-4AA3-B85E-F9033D663D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{133CD196-117A-4AA3-B85E-F9033D663D70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EC4D588-01A9-4764-AADC-3087267C5896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EC4D588-01A9-4764-AADC-3087267C5896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC4D588-01A9-4764-AADC-3087267C5896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EC4D588-01A9-4764-AADC-3087267C5896}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

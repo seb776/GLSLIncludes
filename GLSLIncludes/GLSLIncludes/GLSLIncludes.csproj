@@ -53,11 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GLSLIncludesAssembly\GLSLIncludesAssembly.csproj">
-      <Project>{133cd196-117a-4aa3-b85e-f9033d663d70}</Project>
+      <Project>{6ec4d588-01a9-4764-aadc-3087267c5896}</Project>
       <Name>GLSLIncludesAssembly</Name>
     </ProjectReference>
   </ItemGroup>
