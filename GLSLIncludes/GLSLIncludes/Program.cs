@@ -18,18 +18,18 @@ namespace GLSLIncludes
                     .ParseArguments<Options>(args)
                     .MapResult((o) =>
                     {
-                        if (o.Props.Count() == 0)
+                        if (o.Files.Count() == 0)
                         {
                             throw new Exception("You have to provide at least one file.");
                         }
-                        if (o.Props.Count() > 1)
+                        if (o.Files.Count() > 1)
                         {
                             if (o.Output.Count() == 0 || !o.Output.First().Contains(FILENAME_MACRO))
                             {
                                 throw new Exception($"You have to specify {FILENAME_MACRO} with -o or --output when using multiple files.");
                             }
                         }
-                        foreach (var file in o.Props)
+                        foreach (var file in o.Files)
                         {
                             try // We do not want a failed include to fail other files
                             {
