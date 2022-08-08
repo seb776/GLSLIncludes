@@ -6,21 +6,34 @@ namespace GLSLIncludes_UnitTests
     [TestClass]
     public class UnitTestsIncludesAssembly
     {
-        [TestMethod]
-        public void TestInclude_Local_NoPath()
-        {
-            // Include "file.h"
-        }
-        [TestMethod]
-        public void TestInclude_Local_CurrentPath()
-        {
-            // Include "./file.h"
-        }
+
 
         [TestMethod]
-        public void TestInclude_Local_FullPath()
+        public void TestInclude_Circular()
         {
-            // Include "C:/Folder/file.h"
+            var testFile = "Shaders/Circular.glsl";
+
+            bool failedTest = false;
+            try
+            {
+                var result = GLSLIncludes.GLSLIncludes.ApplyIncludes(testFile);
+                failedTest = true;
+            }
+            catch (Exception e)
+            {
+
+            }
+            if (failedTest)
+                throw new Exception();
+       }
+
+        [TestMethod]
+        public void TestInclude_Diamond()
+        {
+            var testFile = "Shaders/Diamond.glsl";
+
+            var result = GLSLIncludes.GLSLIncludes.ApplyIncludes(testFile);
+
         }
     }
 }

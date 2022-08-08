@@ -56,7 +56,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Shaders\Folder\diamondB.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\Folder\diamondA.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\Diamond.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\Circular.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Shaders\Empty.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\Folder\a.glsl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Shaders\Local_Path.glsl">
@@ -67,6 +82,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GLSLIncludesAssembly\GLSLIncludesAssembly.csproj">
+      <Project>{6ec4d588-01a9-4764-aadc-3087267c5896}</Project>
+      <Name>GLSLIncludesAssembly</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GLSLIncludes\GLSLIncludes.csproj">
       <Project>{0c942bf0-1ff8-4c3a-af7a-53afc00cb9a0}</Project>
       <Name>GLSLIncludes</Name>

@@ -10,11 +10,10 @@
 * Handle deep includes correctly
 * Handle relative paths
 * Detects circular references
+* It does allow diamond shaped includes
 
 ## What it does not / have not been tested
 * Absolute paths
-* It does not allow diamond shaped includes
-* Not tested spaces before the include
 * Not tested spaces / tab robustness
 * Not tested comments robustness
 * Not tested multiline include
