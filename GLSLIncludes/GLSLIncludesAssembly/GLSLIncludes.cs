@@ -49,7 +49,7 @@ namespace GLSLIncludes
             absoluteFilesPath.Add(fullname);
             var currentCodeFile = File.ReadAllText(absoluteFilePath);
             StringBuilder outputFile = new StringBuilder();
-            var lines = currentCodeFile.Split(new string[] { "\n", "\n\r" }, StringSplitOptions.None);
+            var lines = currentCodeFile.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.None);
             foreach (var line in lines)
             {
                 var matchRes = INCLUDE_REGEX.Match(line);
