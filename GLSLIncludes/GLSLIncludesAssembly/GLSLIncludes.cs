@@ -49,7 +49,8 @@ namespace GLSLIncludes
             absoluteFilesPath.Add(fullname);
             var currentCodeFile = File.ReadAllText(absoluteFilePath);
             StringBuilder outputFile = new StringBuilder();
-            var lines = currentCodeFile.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.None);
+            currentCodeFile = currentCodeFile.Replace("\r\n", "\n").Replace("\r", "\n"); // We make it only \n
+            var lines = currentCodeFile.Split(new string[] { "\n" }, StringSplitOptions.None);
             foreach (var line in lines)
             {
                 var matchRes = INCLUDE_REGEX.Match(line);
@@ -63,10 +64,10 @@ namespace GLSLIncludes
                     outputFile.AppendLine(includeCode);
                 }
                 else
-                    outputFile.Append(line);
+                    outputFile.AppendLine(line);
             }
             var outputCode = outputFile.ToString();
-            outputCode = outputCode.Replace("\r\n", "\n").Replace("\r", "\n").Replace("\r", "\n").Replace("\n", "\r\n");
+            //outputCode = outputCode.Replace("\r\n", "\n").Replace("\r", "\n").Replace("\n", "\r\n");
 
             return outputCode;
 
