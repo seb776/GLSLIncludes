@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -60,8 +61,16 @@ namespace GLSLIncludes
                     var currentDirectory = Path.GetDirectoryName(absoluteFilePath);
                     var newIncludeNode = new IncludeNode(fullname, currentNode);
                     //currentNode.Includes.Add(fullname, newIncludeNode);
-                    string includeCode = _recurApplyIncludes(currentDirectory, includeFile, absoluteFilesPath, newIncludeNode);
-                    outputFile.AppendLine(includeCode);
+                    try
+                    {
+                        string includeCode = _recurApplyIncludes(currentDirectory, includeFile, absoluteFilesPath, newIncludeNode);
+                        outputFile.AppendLine(includeCode);
+                    }
+                    catch (Exception e) 
+                    {
+                        // If a file is not found we show the error but continue to process
+                        Console.WriteLine(e.ToString());
+                    }
                 }
                 else
                     outputFile.AppendLine(line);
